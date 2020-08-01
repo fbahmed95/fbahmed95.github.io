@@ -1,0 +1,82 @@
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+div#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 70vh;
+    margin-top: 65px;
+}
+
+div#card-container {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 25px
+}
+
+.memory-card {
+    width: 160px;
+    height: 200px;
+    margin: 10px;
+    background: #8eaeca;
+    border-radius: 5px
+}
+
+.memory-card:hover{
+    cursor: pointer;
+}
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: transparent;
+    width: 160px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  /* .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }  */
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #9abdda;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: #9d88c1;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  
+  .flip-animation{
+    transform: rotateY(180deg);
+  }
