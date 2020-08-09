@@ -1,82 +1,208 @@
-body {
-    font-family: 'Noto Sans JP', sans-serif;
+/* GENERAL CSS */
+html, body{
+  font-family: "Courier";
+}
+.box{
+  display: flex;
+ /*align-items: center;
+ justify-content: center; */
+ margin: auto;
+ margin-top: 30px;
 }
 
-div#game-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 70vh;
-    margin-top: 65px;
+.medium-box{
+ width: 600px;
+ height: 330px;
 }
 
-div#card-container {
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 25px
+.rounded-box{
+ border-radius: 9px;
 }
 
-.memory-card {
-    width: 160px;
-    height: 200px;
-    margin: 10px;
-    background: #8eaeca;
-    border-radius: 5px
+.box-shadow{
+ box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+}
+.column{
+ flex-direction: column;
 }
 
-.memory-card:hover{
-    cursor: pointer;
+div#terminal-container {
+  overflow-y: scroll;
 }
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-card {
-    background-color: transparent;
-    width: 160px;
-    height: 200px;
-    margin: 10px;
-    border-radius: 5px;
-    border: 1px solid #f1f1f1;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  }
-  
-  /* This container is needed to position the front and back side */
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-  
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  /* .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }  */
-  
-  /* Position the front and back side */
-  .flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
-    backface-visibility: hidden;
-  }
-  
-  /* Style the front side (fallback if image is missing) */
-  .flip-card-front {
-    background-color: #9abdda;
-    color: black;
-  }
-  
-  /* Style the back side */
-  .flip-card-back {
-    background-color: #9d88c1;
-    color: white;
-    transform: rotateY(180deg);
-  }
-  
-  .flip-animation{
-    transform: rotateY(180deg);
-  }
+
+div#terminal-top {
+ width: 100%;
+ height: 30px;
+ border-radius: 9px 9px 0px 0px;
+ background: rgb(212 212 212 / 57%);
+}
+div#nav-button-container {
+  display: flex;
+  width: auto;
+  margin: 10px 10px;
+}
+.round-nav-button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0px 4px;
+}
+
+div#close {
+  background: #e65050;
+}
+
+div#minimize {
+  background: #f5d45c;
+}
+
+div#expand {
+  background: #43d443;
+}
+
+.terminal-content-container {
+  font-size: 13px;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 10px 0px;
+}
+
+
+span.terminal-prepend:after {
+  content: ">";
+  color: inherit;
+}
+
+span.terminal-prepend {
+  margin: 0px 10px;
+}
+
+input.terminal-content {
+  border: none;
+  font-family: inherit;
+  /* width: 90%; */
+  color: transparent;
+  text-shadow: 0 0 0 black;
+}
+
+input.terminal-content:focus {
+  outline: none;
+}
+span.typing {
+  width: 4px;
+  height: 17px;
+  animation: blink 0.5s infinite alternate;
+  background: #bababbbd;
+}
+@keyframes blink{
+0%{
+  opacity: 1
+}
+100%{
+  opacity: 0
+}
+}
+
+/* TOGGLE */
+label:hover {
+  cursor: pointer;
+}
+input.sw {
+  opacity: 0;
+  position: absolute;
+  left: -9999px;
+}
+input.sw + label {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+  display: inline-block;
+  height: 20px;
+  width: 40px;
+  position: relative;
+  box-shadow: inset 0 0 0px 2px #e4e4e4;
+  border-radius: 60px;
+  /* White toggle */
+}
+input.sw + label:before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 20px;
+  width: 30px;
+  top: 0;
+  left: 0;
+  border-radius: 15px;
+  background: rgba(76, 217, 100, 0);
+  -webkit-transition: 0.2s cubic-bezier(0.24, 0, 0.5, 1);
+  transition: 0.2s cubic-bezier(0.24, 0, 0.5, 1);
+}
+input.sw + label:after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 17px;
+  width: 17px;
+  top: 50%;
+  margin-top: -9px;
+  left: 1px;
+  border-radius: 60px;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 0px 0 rgba(0, 0, 0, 0.04), 0 4px 9px rgba(0, 0, 0, 0.13), 0 3px 3px rgba(0, 0, 0, 0.05);
+  -webkit-transition: 0.35s cubic-bezier(0.54, 1.6, 0.5, 1);
+  transition: 0.35s cubic-bezier(0.54, 1.6, 0.5, 1);
+}
+input.sw + label span {
+  white-space: nowrap;
+  height: 30px;
+  line-height: 30px;
+  margin-left: 51px;
+  padding-left: 16px;
+}
+input.sw:checked + label:before {
+  width: 40px;
+  background: #f7bd11;
+  -webkit-transition: width 0.2s cubic-bezier(0, 0, 0, 0.1) !important;
+  transition: width 0.2s cubic-bezier(0, 0, 0, 0.1) !important;
+}
+input.sw:checked + label:after {
+  left: 23px;
+}
+input.sw:checked + label {
+  box-shadow: inset 0 0 0px 25px #e4e4e4;
+  -webkit-transition: box-shadow 2.5s cubic-bezier(0, 1.2, 0.94, 0.95);
+  transition: box-shadow 2.5s cubic-bezier(0, 1.2, 0.94, 0.95);
+}
+
+.switch-container img {
+  width: 30px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.switch-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* DARK */
+div#terminal-container.dark {
+  background: #2d2d2db8;
+}
+
+.terminal.terminal-content-container.dark {
+  color: #2cf72c;
+}
+
+input.terminal-content.dark {
+  background: transparent;
+  color: #3cf146;
+  text-shadow: unset;
+}

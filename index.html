@@ -6,24 +6,48 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Memory Game</title>
+        <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./main.css">
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700&display=swap" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div id="game-container">
-            <div id="title-container">So you think you have good memory?</div>
-            <!-- difficulty goes here -->
-            <div id="card-container">
-
+        <div class="switch-container">
+            <img src="./images/lightbulbon.svg" id="light" />
+            <img src="./images/lightbulb.svg" id="dark" style="display:none;"/>
+            <input type="checkbox" name="toggle" class="sw" id="toggle-1" checked>
+            <label for="toggle-1"></label>
+        </div>
+        <div id="terminal-container" class="terminal column box medium-box rounded-box box-shadow">
+            <div id="terminal-top" class="terminal top-nav">
+                <div id="nav-button-container">
+                    <div class="round-nav-button" id="close"></div>
+                    <div class="round-nav-button" id="minimize"></div>
+                    <div class="round-nav-button" id="expand"></div>
+                </div>
+                <div id="terminal-outer-container" class="terminal">
+                    <div class="terminal terminal-content-container">
+                        <span class="terminal terminal-prepend"></span>
+                        <div class="terminal terminal-content">cd portfolio</div>
+                    </div>
+                </div>
+                <div class="terminal terminal-content-container input-container">
+                    <span class="terminal terminal-prepend"></span>
+                    <form id="terminal terminal-input-form">
+                        <input type="text" class="terminal terminal-content" placeholder="" id="terminal-input">
+                    </form>
+                    <span class="terminal typing"></span>
+                </div>
             </div>
         </div>
-        <script src="main.js" ></script>
+
+
+        
+        <script src="./main.js" async defer></script>
     </body>
 </html>
