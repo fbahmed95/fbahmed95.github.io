@@ -60,6 +60,7 @@ const generateCommandText = (text) => {
 
 $("#terminal-input-form").submit(function( event ) {
     event.preventDefault();
+    console.log(event);
     let command = $("#terminal-input").val();
     let terminal_command_text = generateCommandText(command);
     $("#terminal-input").val("");
