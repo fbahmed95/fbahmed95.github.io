@@ -10,13 +10,38 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./main.css">
+        <link rel="stylesheet" href="./desktop.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <div id="top-bar"> 
+            <div id="right-content">
+                <div id="name">Fareeha Ahmed</div>
+                <div id="date"></div>
+            </div> 
+        </div>
+        <div id="folders-container">
+            <div class="folders-container">
+                <img src="./images/desktop/folder_icon.png"/>
+                <div class="folder-text">About</div>
+            </div>
+            <div class="folders-container">
+                <img src="./images/desktop/folder_icon.png"/>
+                <div class="folder-text">Skills</div>
+            </div>
+            <div class="folders-container">
+                <img src="./images/desktop/folder_icon.png"/>
+                <div class="folder-text">Projects</div>
+            </div>
+            <div class="folders-container">
+                <img src="./images/desktop/folder_icon.png"/>
+                <div class="folder-text">Resume</div>
+            </div>
+        </div>
         <div class="switch-container">
             <img src="./images/lightbulbon.svg" id="light" />
             <img src="./images/lightbulb.svg" id="dark" style="display:none;"/>
@@ -49,5 +74,6 @@
 
         
         <script src="./main.js" async defer></script>
+        <script src="./js/desktop.js" async defer></script>
     </body>
 </html>

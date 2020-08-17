@@ -9,23 +9,12 @@ function typeWriter() {
     i++;
     $("#terminal-input").attr('size', $("#terminal-input").attr("placeholder").length);
     setTimeout(typeWriter, speed);
+  }else {
+    $(".terminal.typing").hide();
+    $(".terminal-content").focus()
   }
 }
 typeWriter();
-
-function resizeInput() {
-    if($(this).val()){
-        $(this).attr('size', $(this).val().length);
-    } else {
-        $(this).attr('size', $(this).attr("placeholder").length);
-    }
-}
-
-$('#terminal-input')
-    // event handler
-    .keyup(resizeInput)
-    // resize on page load
-    .each(resizeInput);
 
 var commands_text = {
     "command" : `--about --github --experience --skills --resume`,
