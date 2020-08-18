@@ -30,9 +30,8 @@ html, body{
 div#terminal-container {
   overflow-y: scroll;
   background: white;
-  position: absolute;
+  position: fixed;
   margin: auto;
-  position: absolute;
   top: 0;
   left: 0;
   bottom: 15%;
@@ -49,6 +48,8 @@ div#nav-button-container {
   display: flex;
   width: auto;
   margin: 10px 10px;
+  /* justify-content: center; */
+  /* align-items: center; */
 }
 .round-nav-button {
   width: 12px;

@@ -1,11 +1,16 @@
-body {
+ /* body {
     background: url(./images/desktop/wallpaper.jpeg);
     background-repeat: no-repeat;
     background-position: center;
-    min-height: 100vh;
     margin: 0px;
-}
-
+} */
+html { 
+    background: url(./images/desktop/wallpaper.jpeg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
 div#top-bar {
     width: 100%;
     display: flex;
@@ -31,7 +36,7 @@ div#date {
 div#folders-container {
     display: flex;
     width: 100px;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right:0;
     font-family: 'Open Sans', sans-serif;
@@ -48,7 +53,6 @@ div#folders-container {
     width: 75px;
 }
 
-.folders-container {}
 
 .folders-container {
     display: flex;
