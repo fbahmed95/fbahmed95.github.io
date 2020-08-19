@@ -1,6 +1,7 @@
 .window {
     overflow-y: scroll;
-    background: white;
+    backdrop-filter: blur(4px);
+    background: #ffffff9c;
     width: 500px;
     height: 400px;
     /* margin: auto; */

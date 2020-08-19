@@ -29,7 +29,8 @@ html, body{
 
 div#terminal-container {
   overflow-y: scroll;
-  background: white;
+  background: #ffffff9c;
+  backdrop-filter: blur(4px);
   position: fixed;
   margin: auto;
   top: 0;
@@ -91,6 +92,7 @@ span.terminal-prepend {
 input.terminal-content {
   border: none;
   font-family: inherit;
+  background: transparent;
   /* width: 90%; */
   color: transparent;
   text-shadow: 0 0 0 black;

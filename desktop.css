@@ -21,6 +21,7 @@ div#top-bar {
     font-size: 13.5px;
     align-items: center;
     color: #313131;
+    z-index: 200;
 }
 
 div#right-content {

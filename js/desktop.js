@@ -9,7 +9,7 @@ let day_map = {
     6: "Sat"
 }
 const customHours = (date) => { return (date.getHours() + 24) % 12 || 12; }
-const customMins = (date) => { return date.getMinutes(); }
+const customMins = (date) => { return date.getMinutes() > 9 ? date.getMinutes() : "0" + date.getMinutes(); }
 const getAMPM = (date) => { return date.getHours() > 11 ? "PM" : "AM"; }
 
 setInterval(displayclock,500);

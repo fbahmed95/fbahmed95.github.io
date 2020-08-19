@@ -72,3 +72,8 @@ $("input[name=toggle]").on("click", function(){
     }
     console.log("switch", $(this).is(':checked'))
 })
+
+// $("#terminal-container").on("click", function(){
+//     console.log("container clicked")
+//     $(".terminal-content").focus()
+// })
