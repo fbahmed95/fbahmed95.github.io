@@ -23,7 +23,7 @@ var commands_text = {
                 painting, watching crime shows, or munching on hot cheetos. Check
                 my projects for more!`,
 
-    "--github" : `<a href="https://github.com/fbahmed96" target="_blank">fbahmed95</a>`,
+    "--github" : `<a href="https://github.com/fbahmed95" target="_blank">fbahmed95</a>`,
     "--experience" : `Three months as an intern at GSVlabs. 1.5 years as a software engineer
                      at GSVlabs. One month as team lead.`,
     "--skills" : `Leadership qualities, Javascript, Node.js`,

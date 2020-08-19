@@ -9,9 +9,10 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./main.css">
-        <link rel="stylesheet" href="./desktop.css">
-        <link rel="stylesheet" href="./window.css">
+        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/desktop.css">
+        <link rel="stylesheet" href="./css/window.css">
+        <link rel="stylesheet" href="./css/dock.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js" charset="utf-8"></script>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
@@ -73,20 +74,12 @@
             </div>
         </div>
 
-        <!-- WINDOWS -->
-       <!-- <div id="about" class="window box rounded-box box-shadow" >
-            <div class="window-top top-nav"> 
-                <div id="nav-button-container">
-                    <div class="round-nav-button" id="close" onclick="closeModal('about')"></div>
-                    <div class="round-nav-button" id="minimize"></div>
-                    <div class="round-nav-button" id="expand"></div>
-                </div>
-                <div class="window-title">about.pdf</div>
+        <!-- DOCK -->
+        <div id="dock-container">
+            <div id="dock">
+
             </div>
-        </div> -->
-
-        <!-- END WINDOWS -->
-
+        </div>
         <script src="./main.js" async defer></script>
         <script src="./js/desktop.js" async defer></script>
         <script src="./js/window.js" async defer></script>

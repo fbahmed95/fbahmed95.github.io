@@ -21,7 +21,7 @@ var drag = d3.drag()
         {x: 400, y: 80, w: 500, title: "resume.pdf", name: "resume"}
     ],
     data_terminal = [
-		{x: 40, y: 40}
+		{x: 0, y: 0}
     ],
 	winElemsCreate = d3.select("body").selectAll(".draggable")
 		.data(data)
@@ -54,7 +54,7 @@ winElemsCreate
 
     // terminal
     var terminal = d3.select("body").selectAll("#terminal-container")
-    .data([{x: 40, y: 40}])
+    .data([{x: 0, y: 0}])
     .attr("class", "draggable terminal column box medium-box rounded-box box-shadow")
     .style("left", function(d) { return d.x + "px"; })
     .style("top", function(d) { return d.y + "px"; })

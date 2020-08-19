@@ -1,0 +1,14 @@
+#dock-container{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+div#dock {
+    width: 600px;
+    background: #655b5b75;
+    height: 60px;
+    backdrop-filter: blur(4px);
+    margin: auto;
+    border-radius: 5px 5px 0px 0px;
+}

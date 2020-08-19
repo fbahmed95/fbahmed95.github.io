@@ -5,7 +5,7 @@
     margin: 0px;
 } */
 html { 
-    background: url(./images/desktop/wallpaper.jpeg) no-repeat center center fixed; 
+    background: url(../images/desktop/wallpaper.jpeg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -16,7 +16,7 @@ div#top-bar {
     display: flex;
     height: 25px;
     backdrop-filter: blur(10px);
-    background: rgb(243 242 242 / 77%);
+    background: rgb(247 255 255 / 77%);
     font-family: 'Open Sans', sans-serif;
     font-size: 13.5px;
     align-items: center;
