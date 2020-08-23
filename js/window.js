@@ -1,6 +1,8 @@
 $(".folders-container").on("dblclick", function(e){
     let name = $(this).data("name");
     if($(`#${name}`)){
+        $(`.draggable`).css("z-index", "2");
+        $(`#${name}`).css("z-index", "100");
         $(`#${name}`).show();
     }
 });
