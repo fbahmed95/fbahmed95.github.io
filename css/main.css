@@ -63,6 +63,10 @@ div#close {
   background: #e65050;
 }
 
+div#close:hover {
+  cursor: pointer;
+}
+
 div#minimize {
   background: #f5d45c;
 }

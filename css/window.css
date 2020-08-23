@@ -82,6 +82,7 @@ a {
 div.window-content {
   font-family: 'Open Sans', sans-serif;
   overflow-y: scroll;
+  height: 100%;
 }
 /* window content - skills */
 div#skill_icons {
@@ -107,4 +108,55 @@ div#skill_icons {
 span.skills-title {
   font-size: 13px;
   margin: 4px;
+}
+
+/*window content - resume */
+.resume-prof-pic img {
+  width: 90px;
+  border-radius: 50%;
+}
+
+.resume-prof-pic {
+  position: relative;
+  top: 35px;
+  left: 50px;
+  z-index: 2;
+  /* position: relative; */
+}
+
+.resume-top {
+  width: 570px;
+  height: 100px;
+  background: #af8293;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.resume-top div {
+  margin-left: 30%;
+}
+
+.experience-container {
+  width: 90%;
+  margin: auto;
+  margin-top: 45px;
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+}
+
+.experience-top-container {
+  display: flex;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #b4adc473;
+}
+
+.experience-time {
+  margin-left: auto;
+  font-variant: all-petite-caps;
+}
+
+.experience-title {
+  font-weight: bold;
 }
