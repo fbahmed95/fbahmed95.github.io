@@ -15,7 +15,7 @@ var drag = d3.drag()
 	.on("start", started),
 
 	data = [
-		{x: 40, y: 40, w: 500, h: 400, title: "about.pdf", name: "about"},
+		{x: 40, y: 40, w: 500, h: 400, title: "about.txt", name: "about"},
 		{x: 170, y: 310, w: 500, h: 400, title: "Skills", name: "skills"},
         {x: 300, y: 120, w: 500, h: 400, title: "Projects", name: "projects"},
         {x: 400, y: 80, w: 570, h: 600, title: "experience.pdf", name: "experience"}
@@ -86,6 +86,10 @@ var drag = d3.drag()
             <span class="skills-title">HTML</span>
         </div>
         <div class="skill-icon-container">
+            <i class="devicon-java-plain colored"></i>
+            <span class="skills-title">Java</span>
+        </div>
+        <div class="skill-icon-container">
             <i class="devicon-javascript-plain colored"></i>
             <span class="skills-title">Javascript</span>
         </div>
@@ -152,6 +156,16 @@ var drag = d3.drag()
                 </div>
             </div>
         </div>
+        `)
+
+        d3.selectAll("#content-about")
+        .html(`
+            <div class="about-container">
+                <h3> Hey there! I'm Fareeha. </h3> 
+                <p>I'm a San Francisco Bay-Area based Full-Stack Developer. I'm currently working in the startup industry, creating platforms for various startup communities.</p>
+                <p>I've primarily worked with HTML, CSS, JavaScript, Node.js, Vue.js, Java, and Velocity.</p>
+                <p>When I'm not coding, I'm probably drawing, surfing through Reddit, or laughing at the next meme.</p>
+            </div>
         `)
 
 

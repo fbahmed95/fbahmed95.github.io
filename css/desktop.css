@@ -48,6 +48,7 @@ div#folders-container {
     align-items: center;
     flex-direction: column;
     margin-bottom: 40px;
+    margin-right: 20px;
 }
 
 .folders-container img {
@@ -59,4 +60,6 @@ div#folders-container {
     display: flex;
     flex-direction: column;
     margin: 5px;
+    justify-content: center;
+    align-items: center;
 }

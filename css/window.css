@@ -160,3 +160,15 @@ span.skills-title {
 .experience-title {
   font-weight: bold;
 }
+
+/* window-content about */
+.about-container {
+  width: 91%;
+  margin: auto;
+  font-family: "Courier";
+  color: #342626;
+}
+
+.about-container p {
+  font-size: 14px;
+}
