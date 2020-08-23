@@ -1,80 +1,110 @@
 .window {
-    overflow-y: scroll;
-    backdrop-filter: blur(4px);
-    background: #ffffff9c;
-    width: 500px;
-    height: 400px;
-    /* margin: auto; */
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    /* bottom: 15%; */
-    /* right: 0; */
+  /* backdrop-filter: blur(4px); */
+  /* background: #ffffffd9; */
+  background: white;
+  width: 500px;
+  height: 400px;
+  /* margin: auto; */
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 10%;
+  /* bottom: 15%; */
+  /* right: 0; */
 }
 
 .window-top {
-    width: 100%;
-    display: flex;
-    height: 30px;
-    align-items: center;
-    border-radius: 9px 9px 0px 0px;
-    background: rgb(212 212 212 / 57%);
-    font-family: 'Open Sans', sans-serif;
+  width: 100%;
+  display: flex;
+  height: 30px;
+  align-items: center;
+  border-radius: 9px 9px 0px 0px;
+  background: rgb(212 212 212 / 57%);
+  font-family: 'Open Sans', sans-serif;
 
 }
 .window-title {
-    font-size: 13px;
-    margin-left: 135px;
-    margin-right: auto;
-    /* position: relative; */
-    /* left: 220px; */
-    /* top: 50%; */
-    /* left: 50%; */
-    /* margin: -100px 0 0 -150px; */
+  font-size: 13px;
+  margin-left: 135px;
+  margin-right: auto;
+  /* position: relative; */
+  /* left: 220px; */
+  /* top: 50%; */
+  /* left: 50%; */
+  /* margin: -100px 0 0 -150px; */
 }
 
 *, *:before {
-    box-sizing: border-box;
-    position: relative;
-  }
-  
-  html, body {
-    margin: 0;
-    padding: 0;
-  }
-  
-  
-  h2 {
-    font-size: 1.4em;
-    font-weight: 300;
-    color: #222;
-  }
-  
-  p:not(:last-child) {
-    margin-bottom: 0.6em;
-  }
-  
-  p.small {
-    font-size: 0.8em;
-    color: #222;
-    text-align: center;
-  }
-  
-  a {
-    text-decoration: none;
-    color: inherit;
-    border-bottom: 1px solid #888;
-  }
-  
-  
-  .attr {
-    position: fixed;
-    right: 5px;
-    bottom: 5px;
-    font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
-    font-size: 0.8em;
-    font-weight: normal;
-    color: white;
-    text-align: right;
-  }
-  
+  box-sizing: border-box;
+  position: relative;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+
+h2 {
+  font-size: 1.4em;
+  font-weight: 300;
+  color: #222;
+}
+
+p:not(:last-child) {
+  margin-bottom: 0.6em;
+}
+
+p.small {
+  font-size: 0.8em;
+  color: #222;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid #888;
+}
+
+
+.attr {
+  position: fixed;
+  right: 5px;
+  bottom: 5px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  font-size: 0.8em;
+  font-weight: normal;
+  color: white;
+  text-align: right;
+}
+/* window content - all */
+div.window-content {
+  font-family: 'Open Sans', sans-serif;
+  overflow-y: scroll;
+}
+/* window content - skills */
+div#skill_icons {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: auto;
+  margin-top: 20px;
+  align-items: center;
+}
+.skill-icon-container {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  align-items: center;
+  margin: 10px;
+}
+
+.skill-icon-container i {
+  font-size: 50px;
+}
+
+span.skills-title {
+  font-size: 13px;
+  margin: 4px;
+}

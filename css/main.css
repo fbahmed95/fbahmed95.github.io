@@ -29,8 +29,8 @@ html, body{
 
 div#terminal-container {
   overflow-y: scroll;
-  background: #ffffff9c;
-  backdrop-filter: blur(4px);
+  background: #ffffffd9;
+  /* backdrop-filter: blur(4px); */
   position: fixed;
   margin: auto;
   top: 0;

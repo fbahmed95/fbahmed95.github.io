@@ -9,8 +9,6 @@ const closeModal = (id) => {
     $(`#${id}`).hide();
 }
 
-
-
 var drag = d3.drag()
 	.on("start", started),
 
@@ -35,21 +33,84 @@ var drag = d3.drag()
 		.style("width", function(d) { return d.w + "px"; })
         .style("z-index", function(d,i) { return i + 4; });
         
-// append nav to windows
-winElemsCreate
-	.append("div")
-    .attr("class", "window-top top-nav")
-    .html(function(d) {
-        let id =  d.name;
-        let title = d.title;
-        let html = `<div id="nav-button-container">
-        <div class="round-nav-button" id="close" onclick="closeModal('${id}')"></div>
-        <div class="round-nav-button" id="minimize"></div>
-        <div class="round-nav-button" id="expand"></div>
-    </div>
-    <div class="window-title">${title}</div>`
-        return html; 
-    });
+    // append nav to windows
+    winElemsCreate
+        .append("div")
+        .attr("class", "window-top top-nav")
+        .html(function(d) {
+            let id =  d.name;
+            let title = d.title;
+            let html = `<div id="nav-button-container">
+            <div class="round-nav-button" id="close" onclick="closeModal('${id}')"></div>
+            <div class="round-nav-button" id="minimize"></div>
+            <div class="round-nav-button" id="expand"></div>
+        </div>
+        <div class="window-title">${title}</div>
+        `
+            return html; 
+        });
+
+    // append content to windows
+    winElemsCreate
+        .append("div")
+        .attr("class", "window-content")
+        .attr("id", function(d){ return "content-" + d.name })
+
+    d3.selectAll("#content-skills")
+        .html(`<div id="skill_icons">
+        <div class="skill-icon-container">
+            <i class="devicon-amazonwebservices-original colored"></i>
+            <span class="skills-title">AWS</span>
+        </div>
+        <div class="skill-icon-container">
+            <i class="devicon-confluence-plain colored"></i>
+            <span class="skills-title">Confluence</span>
+        </div>
+        <div class="skill-icon-container">
+            <i class="devicon-css3-plain colored"></i>
+            <span class="skills-title">CSS</span>
+        </div>
+        <div class="skill-icon-container">
+            <i class="devicon-git-plain colored"></i>
+            <span class="skills-title">Git</span>
+        </div>
+        <div class="skill-icon-container">
+            <i class="devicon-github-plain colored"></i>
+            <span class="skills-title">GitHub</span>
+        </div>
+        <div class="skill-icon-container">
+            <i class="devicon-html5-plain colored"></i>
+            <span class="skills-title">HTML</span>
+        </div>
+        <div class="skill-icon-container">
+            <i class="devicon-javascript-plain colored"></i>
+            <span class="skills-title">Javascript</span>
+        </div>
+        <div class="skill-icon-container">
+            <i class="devicon-jquery-plain colored"></i>
+            <span class="skills-title">jQuery</span>
+        </div>
+        <div class="skill-icon-container">
+            <i class="devicon-mongodb-plain colored"></i>
+            <span class="skills-title">MongoDB</span>
+        </div>
+        <div class="skill-icon-container">
+            <i class="devicon-nodejs-plain colored"></i>
+            <span class="skills-title">Nodejs</span>
+        </div>
+        <div class="skill-icon-container">
+            <i class="devicon-postgresql-plain colored"></i>
+            <span class="skills-title">Postgres</span>
+        </div>
+        <div class="skill-icon-container">
+            <i class="devicon-ruby-plain colored"></i>
+            <span class="skills-title">Ruby</span>
+        </div>
+        <div class="skill-icon-container">
+            <i class="devicon-vuejs-plain colored"></i>
+            <span class="skills-title">Vuejs</span>
+        </div>
+    </div>`)
 
 
     // terminal
@@ -59,7 +120,6 @@ winElemsCreate
 
     var winElems = d3.selectAll(".draggable")
     winElems.call(drag);
-
 function started() {
 	console.log("drag start");
     var dragElem = d3.select(this).classed("dragging", true);
