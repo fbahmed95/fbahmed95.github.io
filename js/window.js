@@ -18,7 +18,7 @@ var drag = d3.drag()
 		{x: 40, y: 40, w: 500, h: 400, title: "about.pdf", name: "about"},
 		{x: 170, y: 310, w: 500, h: 400, title: "Skills", name: "skills"},
         {x: 300, y: 120, w: 500, h: 400, title: "Projects", name: "projects"},
-        {x: 400, y: 80, w: 570, h: 600, title: "resume.pdf", name: "resume"}
+        {x: 400, y: 80, w: 570, h: 600, title: "experience.pdf", name: "experience"}
     ],
     data_terminal = [
 		{x: 0, y: 0}
@@ -115,7 +115,7 @@ var drag = d3.drag()
         </div>
     </div>`)
 
-    d3.selectAll("#content-resume")
+    d3.selectAll("#content-experience")
         .html(`
         <div class="resume-top-container">
             <div class="resume-top">
