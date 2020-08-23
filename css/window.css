@@ -66,45 +66,6 @@
     border-bottom: 1px solid #888;
   }
   
-  article {
-    position: absolute;
-    background: inherit;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 6px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
-    overflow: hidden;
-  }
-  article:before {
-    content: '';
-    position: absolute;
-    top: -20px;
-    left: -20px;
-    right: -20px;
-    bottom: -20px;
-    background: inherit;
-    -webkit-filter: blur(10px) saturate(2);
-            filter: blur(10px) saturate(2);
-  }
-  article.dragging:before {
-    -webkit-filter: blur(10px) sepia(1) hue-rotate(200deg);
-            filter: blur(10px) sepia(1) hue-rotate(200deg);
-  }
-  article.dragging .title {
-    background: rgba(215, 225, 255, 0.85);
-  }
-  article .title {
-    padding: 8px;
-    background: rgba(235, 235, 235, 0.85);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  article .title:hover {
-    cursor: move;
-  }
-  article .content {
-    padding: 8px;
-    background: rgba(255, 255, 255, 0.66);
-  }
   
   .attr {
     position: fixed;

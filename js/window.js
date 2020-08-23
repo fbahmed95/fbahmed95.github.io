@@ -55,20 +55,16 @@ winElemsCreate
     // terminal
     var terminal = d3.select("body").selectAll("#terminal-container")
     .data([{x: 0, y: 0}])
-    .attr("class", "draggable terminal column box medium-box rounded-box box-shadow")
-    .style("left", function(d) { return d.x + "px"; })
-    .style("top", function(d) { return d.y + "px"; })
-    .style("z-index", function(d,i) { return i + 4; })
-    console.log("terminal", terminal)
+    .classed("draggable", true)
 
     var winElems = d3.selectAll(".draggable")
-console.log(winElems)
-winElems.call(drag);
-terminal.call(drag);
+    winElems.call(drag);
 
 function started() {
 	console.log("drag start");
-	var dragElem = d3.select(this).classed("dragging", true);
+    var dragElem = d3.select(this).classed("dragging", true);
+    console.log("drageElem", dragElem)
+    console.log("winElems", winElems)
 	// Z-index switch - needs improvement
 	winElems.style("z-index", 2);
 	dragElem.style("z-index", 100);
