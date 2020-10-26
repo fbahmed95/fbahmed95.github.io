@@ -1,5 +1,4 @@
 $(".enter-button").click(() => {
     $("#enter-main-container").fadeOut();
-    $("#game-container").fadeIn();
-
+    setTimeout(function(){ $("#game-container").fadeIn(); }, 700);
 })
