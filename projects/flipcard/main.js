@@ -29,9 +29,14 @@ window.addEventListener('load', (event) => {
                             data2 = -1;        
                         }, 1000); 
                     } else {
+                        $(".flip-card-inner[data-type='"+data1+"'").removeClass("notfound");
+                        $(".flip-card-inner[data-type='"+data2+"'").removeClass("notfound");
                         data1 = -1; 
                         data2 = -1;
                     }
+                }
+                if(!$('.notfound').length){
+                    $("#congrats").fadeIn()
                 }
         }
 
@@ -50,6 +55,7 @@ return Math.floor(Math.random() * Math.floor(max));
 function getCards(numCards){
     var cardContainer = $("#card-container");
     var html = "";
+    $("#card-container").html(html);
     // get random number using array length
     // remove index from array 
     // get new random number using array length 
@@ -74,7 +80,7 @@ function getCards(numCards){
             used[data] = 1;
         }
         html += `<div class="flip-card">
-        <div class="flip-card-inner" data-type="`+data+`">
+        <div class="flip-card-inner notfound" data-type="`+data+`">
           <div class="flip-card-front">
             <!-- image goes here -->
           </div>

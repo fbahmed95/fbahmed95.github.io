@@ -1,0 +1,56 @@
+div#congrats {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    backdrop-filter: blur(2px);
+    /* filter: blur(1px); */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    font-family: 'Libre Baskerville', serif;
+
+}
+
+.modal {
+    width: 450px;
+    height: 280px;
+    background: #fdf9dc;
+    border-radius: 13px;
+    margin-top: 15%;
+    box-shadow: -8px 8px 9px -4px #4a4a4a59;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    width: 90%;
+    margin: auto;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-content p {
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.refresh{
+    width: 100px;
+    padding: 5px 10px;
+    margin: 30px 70px 0px;
+    background: #606c388f;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.refresh:hover {
+    cursor: pointer;
+}

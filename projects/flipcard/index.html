@@ -11,6 +11,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./main.css">
         <link rel="stylesheet" href="./css/background.css">
+        <link rel="stylesheet" href="./css/congrats.css">
+
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -35,9 +37,18 @@
             </div>
         </div>
         <div id="game-container" style="display:none;">
-            <!-- difficulty goes here -->
+            <!-- timer goes here -->
             <div id="card-container">
 
+            </div>
+        </div>
+        <div id="congrats" style="display:none;">
+            <!-- to do: add stats (time and num flips) -->
+            <div class="modal">
+                <div class="modal-content">
+                    <p>Great job!</p>
+                    <div class="refresh" onclick="getCards(18); $('#congrats').fadeOut();">refresh ↺</div>
+                </div>
             </div>
         </div>
         <script src="./js/showcontent.js" ></script>
