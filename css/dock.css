@@ -11,4 +11,19 @@ div#dock {
     backdrop-filter: blur(4px);
     margin: auto;
     border-radius: 5px 5px 0px 0px;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    justify-content: center;
+}
+#dock a {
+    text-decoration: none;
+    border: none;
+    margin: 0px 10px 0px 0px;
+}
+.app-icon {
+    background: #d6a89f;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
 }
