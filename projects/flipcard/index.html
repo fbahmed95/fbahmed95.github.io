@@ -37,7 +37,11 @@
             </div>
         </div>
         <div id="game-container" style="display:none;">
-            <!-- timer goes here -->
+            <!-- timer and flips goes here -->
+            <div class="stats-outer-container">
+                <div class="stats-container"><div class="stats-title">Time: </div><div id="stats-time">0:00</div></div>
+                <div class="stats-container"><div class="stats-title">Flips: </div><div id="stats-flips">0</div></div>
+            </div>
             <div id="card-container">
 
             </div>
@@ -47,7 +51,11 @@
             <div class="modal">
                 <div class="modal-content">
                     <p>Great job!</p>
-                    <div class="refresh" onclick="getCards(18); $('#congrats').fadeOut();">refresh ↺</div>
+                    <div class="stats-outer-container">
+                        <div class="stats-container"><div class="stats-title">Time: </div><div id="stats-time-congrats">0:00</div></div>
+                        <div class="stats-container"><div class="stats-title">Flips: </div><div id="stats-flips-congrats">0</div></div>
+                    </div>
+                    <div class="refresh" onclick="resetGame()">refresh ↺</div>
                 </div>
             </div>
         </div>

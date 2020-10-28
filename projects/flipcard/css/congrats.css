@@ -54,3 +54,12 @@ div#congrats {
 .refresh:hover {
     cursor: pointer;
 }
+
+#congrats .stats-outer-container {
+    justify-content: center;
+    margin: 0px auto;
+}
+
+#congrats .stats-container {
+    margin: 10px;
+}

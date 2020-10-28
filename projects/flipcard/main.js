@@ -1,15 +1,18 @@
 // load cards
+let numFlips = 0;
+var Interval ;
+var seconds = 00; 
+var mins = 00; 
+var stats_time = $("#stats-time");
 window.addEventListener('load', (event) => {
     getCards(18)
     var clicked = {};
     var data1 = -1; 
     var data2 = -1;
-    $(".flip-card").on("click", function(){
-        // if($(".flip-animation").length < 2 ){
-        //     $(this).find(".flip-card-inner").addClass("flip-animation");
-        // } else {
-        //     $(".flip-card-inner").removeClass("flip-animation");
-        // }
+    $("body").on("click", ".flip-card", function(){
+        console.log("cllickedd")
+        numFlips += 1;
+        $("#stats-flips").text(numFlips);    
         if(data1 === -1 || data2 === -1){
             $(this).find(".flip-card-inner").addClass("flip-animation");
             if(data1 !== -1){
@@ -36,7 +39,11 @@ window.addEventListener('load', (event) => {
                     }
                 }
                 if(!$('.notfound').length){
-                    $("#congrats").fadeIn()
+                    clearInterval(Interval);
+                    $("#congrats").fadeIn();
+                    $("#stats-time-congrats").text($("#stats-time").text())
+                    $("#stats-flips-congrats").text($("#stats-flips").text())
+
                 }
         }
 
@@ -52,9 +59,56 @@ function getRandomInt(max) {
 return Math.floor(Math.random() * Math.floor(max));
 }
 
+$(".enter-button").click(() => {
+    clearInterval(Interval);
+    Interval = setInterval(startTimer, 1000);
+})
+
+function resetGame (){
+    getCards(18); 
+    $('#congrats').fadeOut(); 
+    seconds = 00; 
+    mins = 00; 
+    Interval = setInterval(startTimer, 1000);
+    data1 = -1; 
+    data2 = -1;
+}
+
+
+function startTimer () {
+    seconds++; 
+    let set_text = ""
+    
+    if(seconds < 10){
+        if(mins < 10){
+            stats_time.html("0" + mins + ":0" + seconds)
+        } else {
+            stats_time.html(mins + ":0" + seconds)
+        }
+    } else if (seconds < 60){
+        if(mins < 10){
+            stats_time.html("0" + mins + ":" + seconds)
+        } else {
+            stats_time.html(mins + ":" + seconds)
+        }
+    } else {
+        seconds = 00;
+        mins++;
+        if(mins < 10){
+            stats_time.html("0" + mins + ":00")
+        } else {
+            stats_time.html(mins + ":" + seconds)
+        }
+    }
+  
+  }
+
 function getCards(numCards){
     var cardContainer = $("#card-container");
     var html = "";
+    numFlips = 0;
+    $("#stats-flips").text(numFlips);
+    $("#stats-time").text("00:00");
     $("#card-container").html(html);
     // get random number using array length
     // remove index from array 
