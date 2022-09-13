@@ -8,9 +8,9 @@ const LOCATION_ERROR_MESSAGES = {
 
 
 const getCityFromCoordinates = async (lat, lon) => {
-  const api_key = "AIzaSyCgeSMb9jRH3CY4bgQzOxyHlq4zRi0mAQk";
+  const api_key = "asdfg";
   // https://openweathermap.org/forecast5 documentation
-  // https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=AIzaSyCgeSMb9jRH3CY4bgQzOxyHlq4zRi0mAQk
+  // https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=
   const res = await getRestCall(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lon}&key=${api_key}`);
   var city,
       state;
