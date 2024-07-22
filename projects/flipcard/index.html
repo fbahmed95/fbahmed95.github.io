@@ -2,64 +2,83 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Memory Game</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./main.css">
-        <link rel="stylesheet" href="./css/background.css">
-        <link rel="stylesheet" href="./css/congrats.css">
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
 
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 7]>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Memory Game</title>
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./css/background.css">
+    <link rel="stylesheet" href="./css/congrats.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div class="header-container">
-            <h1>memory<span>flip</span>.</h1>
-            <a href="../../index.html">back</a>
-        </div>
-        <div id="enter-main-container">
-            <div class="enter-blob-text">
-                <img src="./images/blob.svg" />
-                <div class="enter-container">
-                    <div class="enter-text">
-                        Test your memory in this interactive flip-card game.
-                    </div>
-                    <div class="enter-button"><p>start →</p></div>
+    <div class="header-container">
+        <h1>memory<span>flip</span>.</h1>
+        <a href="../../index.html">back</a>
+    </div>
+    <div id="enter-main-container">
+        <div class="enter-blob-text">
+            <img src="./images/blob.svg" />
+            <div class="enter-container">
+                <div class="enter-text">
+                    Test your memory in this interactive flip-card game.
+                </div>
+                <div class="enter-button">
+                    <p>start →</p>
                 </div>
             </div>
         </div>
-        <div id="game-container" style="display:none;">
-            <!-- timer and flips goes here -->
-            <div class="stats-outer-container">
-                <div class="stats-container"><div class="stats-title">Time: </div><div id="stats-time">0:00</div></div>
-                <div class="stats-container"><div class="stats-title">Flips: </div><div id="stats-flips">0</div></div>
+    </div>
+    <div id="game-container" style="display:none;">
+        <!-- timer and flips goes here -->
+        <div class="stats-outer-container">
+            <div class="stats-container">
+                <div class="stats-title">Time: </div>
+                <div id="stats-time">0:00</div>
             </div>
-            <div id="card-container">
+            <div class="stats-container">
+                <div class="stats-title">Flips: </div>
+                <div id="stats-flips">0</div>
+            </div>
+        </div>
+        <div id="card-container">
 
-            </div>
         </div>
-        <div id="congrats" style="display:none;">
-            <!-- to do: add stats (time and num flips) -->
-            <div class="modal">
-                <div class="modal-content">
-                    <p>Great job!</p>
-                    <div class="stats-outer-container">
-                        <div class="stats-container"><div class="stats-title">Time: </div><div id="stats-time-congrats">0:00</div></div>
-                        <div class="stats-container"><div class="stats-title">Flips: </div><div id="stats-flips-congrats">0</div></div>
+    </div>
+    <div id="congrats" style="display:none;">
+        <!-- to do: add stats (time and num flips) -->
+        <div class="modal">
+            <div class="modal-content">
+                <p>Great job!</p>
+                <div class="stats-outer-container">
+                    <div class="stats-container">
+                        <div class="stats-title">Time: </div>
+                        <div id="stats-time-congrats">0:00</div>
                     </div>
-                    <div class="refresh" onclick="resetGame()">refresh ↺</div>
+                    <div class="stats-container">
+                        <div class="stats-title">Flips: </div>
+                        <div id="stats-flips-congrats">0</div>
+                    </div>
                 </div>
+                <div class="refresh" onclick="resetGame()">refresh ↺</div>
             </div>
         </div>
-        <script src="./js/showcontent.js" ></script>
-        <script src="main.js" ></script>
-    </body>
+    </div>
+    <script src="./js/showcontent.js"></script>
+    <script src="main.js"></script>
+</body>
+
 </html>
