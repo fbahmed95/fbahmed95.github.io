@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DJ Name Generator</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./css/disco.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div class="header-container">
+        <h1>Disco name generator.</h1>
+        <a href="../../index.html">back</a>
+    </div>
+    <div id="enter-main-container">
+        <div id="discoBall">
+            <div id="discoBallMiddle"></div>
+        </div>
+
+        <div class="enter-blob-text">
+            <div class="enter-container">
+                <button class="enter-btn" id="enter">
+                    hit it.
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="name-outer-container" style="display:none;">
+        <div id="name-container"> </div>
+        <button class="enter-btn" id="refresh">
+            try again.
+        </button>
+    </div>
+    <script src="./js/dictionary.js"></script>
+    <script src="main.js"></script>
+    <script src="./js/disco.js"></script>
+</body>
+
+</html>
