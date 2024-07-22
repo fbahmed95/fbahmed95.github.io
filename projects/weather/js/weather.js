@@ -9,14 +9,14 @@ const WEATHER_MAPPING_GIF = {
     230	: "../images/weather_types/raining_sky.gif",
     231	: "../images/weather_types/raining_sky.gif",
     232 : "../images/weather_types/raining_sky.gif",
-    300 : "../images/weather_types/raining_sky.gif",	
-    301 : "../images/weather_types/raining_sky.gif",	
-    302 : "../images/weather_types/raining_sky.gif",	
-    310 : "../images/weather_types/raining_sky.gif",	
-    311 : "../images/weather_types/raining_sky.gif",	
-    312 : "../images/weather_types/raining_sky.gif",	
-    313 : "../images/weather_types/raining_sky.gif",	
-    314 : "../images/weather_types/raining_sky.gif",	
+    300 : "../images/weather_types/raining_sky.gif",
+    301 : "../images/weather_types/raining_sky.gif",
+    302 : "../images/weather_types/raining_sky.gif",
+    310 : "../images/weather_types/raining_sky.gif",
+    311 : "../images/weather_types/raining_sky.gif",
+    312 : "../images/weather_types/raining_sky.gif",
+    313 : "../images/weather_types/raining_sky.gif",
+    314 : "../images/weather_types/raining_sky.gif",
     321 : "../images/weather_types/raining_sky.gif",
     500 : "../images/weather_types/raining_sky.gif",
     501 : "../images/weather_types/raining_sky.gif",
@@ -29,14 +29,14 @@ const WEATHER_MAPPING_GIF = {
     522 : "../images/weather_types/raining_sky.gif",
     531 : "../images/weather_types/raining_sky.gif",
     701	: "../images/weather_types/smokey_sky.gif",
-    711	: "../images/weather_types/smokey_sky.gif", 
-    721	: "../images/weather_types/smokey_sky.gif", 
-    731	: "../images/weather_types/smokey_sky.gif", 
-    741	: "../images/weather_types/smokey_sky.gif", 
-    751	: "../images/weather_types/smokey_sky.gif", 
-    761	: "../images/weather_types/smokey_sky.gif", 
-    762	: "../images/weather_types/smokey_sky.gif", 
-    771	: "../images/weather_types/smokey_sky.gif", 
+    711	: "../images/weather_types/smokey_sky.gif",
+    721	: "../images/weather_types/smokey_sky.gif",
+    731	: "../images/weather_types/smokey_sky.gif",
+    741	: "../images/weather_types/smokey_sky.gif",
+    751	: "../images/weather_types/smokey_sky.gif",
+    761	: "../images/weather_types/smokey_sky.gif",
+    762	: "../images/weather_types/smokey_sky.gif",
+    771	: "../images/weather_types/smokey_sky.gif",
     781 : "../images/weather_types/smokey_sky.gif",
     800 : "../images/weather_types/clear_sky.gif",
     801 : "../images/weather_types/cloudy_sky.gif",
@@ -64,7 +64,7 @@ const convertTimestamp = (dt, type) => {
 }
 
 const getWeather = async (lat, lon) => {
-    api_key = "9c55bcb1a2daa4890edf08d983b8b3c8"
+    api_key = "86d4d5ab0b3da5b16040522a0629c195"
     // https://openweathermap.org/forecast5 documentation
     const res = await getRestCall(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${api_key}&units=imperial&exclude=minutely,alerts`);
     if(res.cod == 401){
@@ -81,7 +81,7 @@ const generateWeekContent = (data) => {
     return `<div class="week-content-box">
                 <div class="week-content-date">${date}</div>
                 <div class="week-content-info">
-                    <div class="week-content-temp">${temp}</div> 
+                    <div class="week-content-temp">${temp}</div>
                     <div class="week-content-icon"><img src="${icon}"/> </div>
                 </div>
             </div>`
@@ -92,7 +92,7 @@ const handleWeatherRes = (weather_res) => {
         alert(weather_res.error)
     } else {
         // today's stuff
-        var current = weather_res.current; 
+        var current = weather_res.current;
         for(var item in current){
             if(item.includes("sun")){
                 $(`#today-${item}`).html(convertTimestamp(current[item], "time"))
@@ -102,10 +102,10 @@ const handleWeatherRes = (weather_res) => {
         }
 
         // set background image on main banner
-        var current_code = current.weather[0].id; 
+        var current_code = current.weather[0].id;
         generateCSSVariable("today-temp-background", `url('${WEATHER_MAPPING_GIF[current_code]}')`)
 
-        var current_description = current.weather[0].description; 
+        var current_description = current.weather[0].description;
         $("#description").html(current_description);
 
         // get date
@@ -117,8 +117,8 @@ const handleWeatherRes = (weather_res) => {
         var formattedTime = date.toDateString() + " " + hours + ':' + minutes.substr(-2)
         $("#date").html(formattedTime)
 
-        // get the next every 3 hours , 4 times 
-        var hourly_data = weather_res.hourly; 
+        // get the next every 3 hours , 4 times
+        var hourly_data = weather_res.hourly;
         var time_arr = [];
         var data_arr = []
         for(var i = 0; i < 4; i++){
@@ -126,12 +126,12 @@ const handleWeatherRes = (weather_res) => {
             time_arr.push(convertTimestamp(hour_data.dt, "time"))
             data_arr.push(hour_data.temp);
         }
-        // generate chart 
+        // generate chart
         var graph_url = getWeatherGraphURL(time_arr, data_arr)
         $(".today-banner-graph").html(`<img src="${graph_url}"/>`)
 
         // do week's data
-        var week_data = weather_res.daily; 
+        var week_data = weather_res.daily;
         var week_data_html = "";
         for(var i = 0; i < week_data.length; i++){
             week_data_html += generateWeekContent(week_data[i])
