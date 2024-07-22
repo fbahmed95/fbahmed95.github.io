@@ -2,97 +2,103 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
 <!-- https://codepen.io/ste-vg/pen/GqaZbo // weather icon/gifs -->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Weather App</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./main.css">
-        <link rel="stylesheet" href="./css/loader.css">
-        <link rel="stylesheet" href="./css/weatherContent.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
-        
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
-        <!-- quickchart.io -->
-        <script src="https://cdn.jsdelivr.net/npm/quickchart-js@3.1.0/build/quickchart.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 7]>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Weather App - under construction</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./css/loader.css">
+    <link rel="stylesheet" href="./css/weatherContent.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Ubuntu:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+    <!-- quickchart.io -->
+    <script src="https://cdn.jsdelivr.net/npm/quickchart-js@3.1.0/build/quickchart.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div class="header-container">
-            <h1>Weather</h1>
-            <a href="../../index.html">back</a>
-        </div>
-        <div class="main-content">
-            <div id="loader"> </div>
-            <div class="content-wrapper">
-                <div class="today-content">
-                    <div class="today-temp">
-                        <div class="today-temp-container">
-                            <div id="today-temp"> </div>
-                            <div class="location"> </div>
-                        </div>
-                        <div class="today-banner-info">
-                            <div id="date"> </div>
-                            <div id="description"> </div>
-                            <div>Feels like <span id="today-feels_like"> </span></div>
-                        </div>
-                        <div class="today-banner-graph"> </div>
+    <div class="header-container">
+        <h1>Weather</h1>
+        <a href="../../index.html">back</a>
+    </div>
+    <div class="main-content">
+        <div id="loader"> </div>
+        <div class="content-wrapper">
+            <div class="today-content">
+                <div class="today-temp">
+                    <div class="today-temp-container">
+                        <div id="today-temp"> </div>
+                        <div class="location"> </div>
                     </div>
-                    <div class="today-info">
-                        <div class="info-box">
-                            <div class="info-title-container">
-                                <h3>Wind Speed</h3>
-                                <img class="weather-icon" src="./images/icons/wind_speed_icon.png"/>
-                            </div>
-                            <div id="today-wind_speed" class="info-content"></div>
-                        </div>
-                        <div class="info-box">
-                            <div class="info-title-container">
-                                <h3>Humidity</h3>
-                                <img class="weather-icon" src="./images/icons/humidity_icon.png"/>
-                            </div>
-                            <div id="today-humidity" class="info-content"></div>
-                        </div>
-                        <div class="info-box">
-                            <div class="info-title-container">
-                                <h3>Sunrise</h3>
-                                <img class="weather-icon" src="./images/icons/sunrise_icon.png"/>
-                            </div>
-                            <div id="today-sunrise" class="info-content"></div>
-
-
-                        </div>
-                        <div class="info-box">
-                            <div class="info-title-container">
-                                <h3>Sunset</h3>
-                                <img class="weather-icon" src="./images/icons/sunset_icon.png"/>
-                            </div>
-                            <div id="today-sunset" class="info-content"></div>
-
-
-                        </div>
+                    <div class="today-banner-info">
+                        <div id="date"> </div>
+                        <div id="description"> </div>
+                        <div>Feels like <span id="today-feels_like"> </span></div>
                     </div>
+                    <div class="today-banner-graph"> </div>
                 </div>
-                <div class="week-content">
+                <div class="today-info">
+                    <div class="info-box">
+                        <div class="info-title-container">
+                            <h3>Wind Speed</h3>
+                            <img class="weather-icon" src="./images/icons/wind_speed_icon.png" />
+                        </div>
+                        <div id="today-wind_speed" class="info-content"></div>
+                    </div>
+                    <div class="info-box">
+                        <div class="info-title-container">
+                            <h3>Humidity</h3>
+                            <img class="weather-icon" src="./images/icons/humidity_icon.png" />
+                        </div>
+                        <div id="today-humidity" class="info-content"></div>
+                    </div>
+                    <div class="info-box">
+                        <div class="info-title-container">
+                            <h3>Sunrise</h3>
+                            <img class="weather-icon" src="./images/icons/sunrise_icon.png" />
+                        </div>
+                        <div id="today-sunrise" class="info-content"></div>
 
+
+                    </div>
+                    <div class="info-box">
+                        <div class="info-title-container">
+                            <h3>Sunset</h3>
+                            <img class="weather-icon" src="./images/icons/sunset_icon.png" />
+                        </div>
+                        <div id="today-sunset" class="info-content"></div>
+
+
+                    </div>
                 </div>
             </div>
+            <div class="week-content">
+
+            </div>
         </div>
-<script>
-</script>
-        <script src="../index.js"></script>
-        <script src="./js/cssVariablesGenerator.js"></script>
-        <script src="./js/weatherGraphGenerator.js"></script>
-        <script src="./js/loader.js"></script>
-        <script src="./js/location.js"></script>
-        <script src="./js/weather.js"></script>
-        <script src="main.js"></script>
-    </body>
+    </div>
+    <script>
+    </script>
+    <script src="../index.js"></script>
+    <script src="./js/cssVariablesGenerator.js"></script>
+    <script src="./js/weatherGraphGenerator.js"></script>
+    <script src="./js/loader.js"></script>
+    <script src="./js/location.js"></script>
+    <script src="./js/weather.js"></script>
+    <script src="main.js"></script>
+</body>
+
 </html>
