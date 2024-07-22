@@ -35,7 +35,7 @@ var drag = d3.drag()
         .style("width", function(d) { return d.w + "px"; })
         .style("height", function(d) { return d.h + "px"; })
         .style("z-index", function(d,i) { return i + 4; });
-        
+
     // append nav to windows
     winElemsCreate
         .append("div")
@@ -50,7 +50,7 @@ var drag = d3.drag()
         </div>
         <div class="window-title">${title}</div>
         `
-            return html; 
+            return html;
         });
 
     // append content to windows
@@ -119,40 +119,45 @@ var drag = d3.drag()
         </div>
     </div>`)
 
+    d3.selectAll("#content-projects")
+        .html(`<div id="projects-icons">
+            <a href="./projects/flipcard/index.html">
+                <div class="app-icon" id="flip">f.</div>
+            </a>
+            <a href="./projects/weather/index.html">
+                <div class="app-icon" id="weather">☀︎</div>
+            </a>
+            <a href="./projects/name/index.html">
+                <div class="app-icon" id="name">🪩</div>
+            </a>
+
+        </div>`)
+
     d3.selectAll("#content-experience")
         .html(`
         <div class="resume-top-container">
             <div class="resume-top">
-                <div>Fareeha Ahmed • Full-Stack Developer</div>
+                <div>Fareeha Ahmed • Front-End Developer</div>
             </div>
             <div class="resume-prof-pic">
                 <img src="./images/resume/prof-pic.jpeg"/>
             </div>
             <div class="experience-container">
                 <div class="experience-top-container">
-                    <div class="experience-title">Experience 1</div>
-                    <div class="experience-time">time1 - time2</div>
+                    <div class="experience-title">Software Engineer</div>
+                    <div class="experience-time">Feb 2019 - Now</div>
                 </div>
                 <div class="experience-content">
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+                    Team lead for a five person team, overseeing team members’ progress on tasks simultaneous to own tasks. Handled clients one-on-one, providing deliverables, fielding feature requests, and managed customer service for high SLA customers. Created security documentation and architecture designs. Instrumental in the development and launch of multiple projects, each with 2-3 month turnaround time using jQuery, HTML, CSS, Node.js and Java
                 </div>
             </div>
             <div class="experience-container">
                 <div class="experience-top-container">
-                    <div class="experience-title">Experience 2</div>
-                    <div class="experience-time">time1 - time2</div>
+                    <div class="experience-title">Software Engineer Intern</div>
+                    <div class="experience-time">Oct 2018 - January 2019</div>
                 </div>
                 <div class="experience-content">
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
-                </div>
-            </div>
-            <div class="experience-container">
-                <div class="experience-top-container">
-                    <div class="experience-title">Experience 3</div>
-                    <div class="experience-time">time1 - time2</div>
-                </div>
-                <div class="experience-content">
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+                    Built web pages from mockups primarily using HTML, CSS, and Javascript. Launched beta release of flagship product within a 3 month timeframe.
                 </div>
             </div>
         </div>
@@ -161,8 +166,8 @@ var drag = d3.drag()
         d3.selectAll("#content-about")
         .html(`
             <div class="about-container">
-                <h3> Hey there! I'm Fareeha. </h3> 
-                <p>I'm a San Francisco Bay-Area based Full-Stack Developer. I'm currently working in the startup industry, creating platforms for various startup communities.</p>
+                <h3> Hey there! I'm Fareeha. </h3>
+                <p>I'm a Sacramento based front-end focused developer. I'm currently working in the startup industry, creating platforms for various startup communities.</p>
                 <p>I've primarily worked with HTML, CSS, JavaScript, Node.js, Vue.js, Java, and Velocity.</p>
                 <p>When I'm not coding, I'm probably drawing, surfing through Reddit, or laughing at the next meme.</p>
             </div>
