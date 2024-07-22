@@ -2,93 +2,102 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./css/main.css">
-        <link rel="stylesheet" href="./css/desktop.css">
-        <link rel="stylesheet" href="./css/window.css">
-        <link rel="stylesheet" href="./css/dock.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js" charset="utf-8"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/desktop.css">
+    <link rel="stylesheet" href="./css/window.css">
+    <link rel="stylesheet" href="./css/dock.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js" charset="utf-8"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div id="top-bar"> 
-            <div id="right-content">
-                <div id="name">Fareeha Ahmed</div>
-                <div id="date"></div>
-            </div> 
+    <div id="top-bar">
+        <div id="right-content">
+            <div id="name">Fareeha Ahmed</div>
+            <div id="date"></div>
         </div>
-        <div id="folders-container">
-            <div class="folders-container" data-name="about">
-                <img src="./images/desktop/filetext.png"/>
-                <div class="folder-text">about.txt</div>
-            </div>
-            <div class="folders-container" data-name="experience">
-                <img src="./images/desktop/filetext.png"/>
-                <div class="folder-text">experience.pdf</div>
-            </div>
-            <div class="folders-container" data-name="skills">
-                <img src="./images/desktop/folder_icon.png"/>
-                <div class="folder-text">Skills</div>
-            </div>
-            <div class="folders-container" data-name="projects">
-                <img src="./images/desktop/folder_icon.png"/>
-                <div class="folder-text">Projects</div>
-            </div>
+    </div>
+    <div id="folders-container">
+        <div class="folders-container" data-name="about">
+            <img src="./images/desktop/filetext.png" />
+            <div class="folder-text">about.txt</div>
         </div>
-        <div class="switch-container">
-            <img src="./images/lightbulbon.svg" id="light" />
-            <img src="./images/lightbulb.svg" id="dark" style="display:none;"/>
-            <input type="checkbox" name="toggle" class="sw" id="toggle-1" checked>
-            <label for="toggle-1"></label>
+        <div class="folders-container" data-name="experience">
+            <img src="./images/desktop/filetext.png" />
+            <div class="folder-text">experience.pdf</div>
         </div>
-        <div id="terminal-container" class="terminal column box medium-box rounded-box box-shadow">
-            <div id="terminal-top" class="terminal top-nav">
-                <div id="nav-button-container">
-                    <div class="round-nav-button" id="close"></div>
-                    <div class="round-nav-button" id="minimize"></div>
-                    <div class="round-nav-button" id="expand"></div>
-                </div>
-                <div id="terminal-outer-container" class="terminal">
-                    <div class="terminal terminal-content-container">
-                        <span class="terminal terminal-prepend"></span>
-                        <div class="terminal terminal-content">cd portfolio</div>
-                    </div>
-                </div>
-                <div class="terminal terminal-content-container input-container">
+        <div class="folders-container" data-name="skills">
+            <img src="./images/desktop/folder_icon.png" />
+            <div class="folder-text">Skills</div>
+        </div>
+        <div class="folders-container" data-name="projects">
+            <img src="./images/desktop/folder_icon.png" />
+            <div class="folder-text">Projects</div>
+        </div>
+    </div>
+    <div class="switch-container">
+        <img src="./images/lightbulbon.svg" id="light" />
+        <img src="./images/lightbulb.svg" id="dark" style="display:none;" />
+        <input type="checkbox" name="toggle" class="sw" id="toggle-1" checked>
+        <label for="toggle-1"></label>
+    </div>
+    <div id="terminal-container" class="terminal column box medium-box rounded-box box-shadow">
+        <div id="terminal-top" class="terminal top-nav">
+            <div id="nav-button-container">
+                <div class="round-nav-button" id="close"></div>
+                <div class="round-nav-button" id="minimize"></div>
+                <div class="round-nav-button" id="expand"></div>
+            </div>
+            <div id="terminal-outer-container" class="terminal">
+                <div class="terminal terminal-content-container">
                     <span class="terminal terminal-prepend"></span>
-                    <form id="terminal-input-form">
-                        <input type="text" class="terminal terminal-content" placeholder="" id="terminal-input">
-                    </form>
-                    <span class="terminal typing"></span>
+                    <div class="terminal terminal-content">cd portfolio</div>
                 </div>
             </div>
-        </div>
-
-        <!-- DOCK -->
-        <div id="dock-container">
-            <div id="dock">
-                <a href="./projects/flipcard/index.html"><div class="app-icon">flip</div></a>
-                <a href="./projects/weather/index.html"><div class="app-icon">weather</div></a>
-                <a href="./projects/flipcard/index.html"><div class="app-icon"></div></a>
-                <a href="./projects/flipcard/index.html"><div class="app-icon"></div></a>
+            <div class="terminal terminal-content-container input-container">
+                <span class="terminal terminal-prepend"></span>
+                <form id="terminal-input-form">
+                    <input type="text" class="terminal terminal-content" placeholder="" id="terminal-input">
+                </form>
+                <span class="terminal typing"></span>
             </div>
         </div>
+    </div>
 
-        <script src="./main.js" async defer></script>
-        <script src="./js/desktop.js" async defer></script>
-        <script src="./js/window.js" async defer></script>
+    <!-- DOCK -->
+    <div id="dock-container">
+        <div id="dock">
+            <a href="./projects/flipcard/index.html">
+                <div class="app-icon" id="flip">f.</div>
+            </a>
+            <a href="./projects/weather/index.html">
+                <div class="app-icon" id="weather">☀︎</div>
+            </a>
+            <a href="./projects/name/index.html">
+                <div class="app-icon" id="name">🪩</div>
+            </a>
+            <!--     <a href="./projects/flipcard/index.html"><div class="app-icon"></div></a> -->
+        </div>
+    </div>
 
-    </body>
+    <script src="./main.js" async defer></script>
+    <script src="./js/desktop.js" async defer></script>
+    <script src="./js/window.js" async defer></script>
+
+</body>
+
 </html>
-

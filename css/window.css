@@ -23,6 +23,7 @@
   font-family: 'Open Sans', sans-serif;
 
 }
+
 .window-title {
   font-size: 13px;
   margin-left: 135px;
@@ -34,12 +35,14 @@
   /* margin: -100px 0 0 -150px; */
 }
 
-*, *:before {
+*,
+*:before {
   box-sizing: border-box;
   position: relative;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
@@ -78,12 +81,14 @@ a {
   color: white;
   text-align: right;
 }
+
 /* window content - all */
 div.window-content {
   font-family: 'Open Sans', sans-serif;
   overflow-y: scroll;
   height: 100%;
 }
+
 /* window content - skills */
 div#skill_icons {
   display: flex;
@@ -93,6 +98,7 @@ div#skill_icons {
   margin-top: 20px;
   align-items: center;
 }
+
 .skill-icon-container {
   display: flex;
   flex-direction: column;
@@ -108,6 +114,18 @@ div#skill_icons {
 span.skills-title {
   font-size: 13px;
   margin: 4px;
+}
+
+/*window content - projects */
+
+div#projects-icons {
+  display: flex;
+  margin: 20px;
+}
+
+div#projects-icons a {
+  border-bottom: none;
+  margin: 0px 10px 0px;
 }
 
 /*window content - resume */
@@ -133,6 +151,7 @@ span.skills-title {
   align-items: center;
   color: white;
 }
+
 .resume-top div {
   margin-left: 30%;
 }

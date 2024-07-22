@@ -1,4 +1,4 @@
-#dock-container{
+#dock-container {
     width: 100%;
     position: fixed;
     bottom: 0;
@@ -16,14 +16,42 @@ div#dock {
     padding: 0px 10px;
     justify-content: center;
 }
+
 #dock a {
     text-decoration: none;
     border: none;
     margin: 0px 10px 0px 0px;
 }
+
 .app-icon {
-    background: #d6a89f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 50px;
     height: 50px;
     border-radius: 5px;
+}
+
+.app-icon#flip {
+    font-size: 25px;
+    color: #606c38;
+    background: #fefae0;
+}
+
+.app-icon#weather {
+    background: #7dbfea;
+    background: -webkit-linear-gradient(bottom left, #49a6e4, #2f87c3);
+    background: -moz-linear-gradient(bottom left, #49a6e4, #2f87c3);
+    background: linear-gradient(bottom left, #49a6e4, #2f87c3);
+    color: white;
+    font-size: 50px;
+}
+
+.app-icon#name {
+    background: #7dbfea;
+    background-color: #333;
+    background: -webkit-linear-gradient(bottom left, #111, #222);
+    background: -moz-linear-gradient(bottom left, #111, #222);
+    background: linear-gradient(bottom left, #111, #222);
+    font-size: 24px;
 }
